@@ -5,7 +5,7 @@
 
 return [
     // 应用地址
-    'app_host'         => env('APP_HOST', ''),
+    'app_host'         => env('app.host', ''),
     // 应用的命名空间
     'app_namespace'    => '',
     // 是否启用路由
@@ -14,6 +14,11 @@ return [
     'default_app'      => 'index',
     // 默认时区
     'default_timezone' => 'Asia/Shanghai',
+
+    // 开启多应用
+    "auto_multi_app"   => true,
+    // 开启应用快速访问
+    "app_express"      => true,
 
     // 应用映射（自动多应用模式有效）
     'app_map'          => [],
@@ -29,4 +34,6 @@ return [
     'error_message'    => '页面错误！请稍后再试～',
     // 显示错误信息
     'show_error_msg'   => false,
+    // 设置超时时间
+    'timeout'          => 60
 ];
