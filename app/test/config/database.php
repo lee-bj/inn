@@ -2,7 +2,7 @@
 
 return [
     // 默认使用的数据库连接配置
-    'default'         => env('test.driver', 'test'),
+    'default'         => env('demo.driver', 'demo'),
 
     // 自定义时间查询规则
     'time_query_rule' => [],
@@ -20,25 +20,25 @@ return [
 
     // 数据库连接配置信息
     'connections'     => [
-        'test' => [
+        'demo' => [
             // 数据库类型
-            'type'            => env('test.type', env('database.type', 'mysql')),
+            'type'            => env('demo.type', env('database.type', 'mysql')),
             // 服务器地址
-            'hostname'        => env('test.hostname', env('database.hostname', '127.0.0.1')),
+            'hostname'        => env('demo.hostname', env('database.hostname', '127.0.0.1')),
             // 数据库名
-            'database'        => env('test.database', env('database.database', '')),
+            'database'        => env('demo.database', env('database.database', '')),
             // 用户名
-            'username'        => env('test.username', env('database.username', 'root')),
+            'username'        => env('demo.username', env('database.username', 'root')),
             // 密码
-            'password'        => env('test.password', env('database.password', '')),
+            'password'        => env('demo.password', env('database.password', '')),
             // 端口
-            'hostport'        => env('test.hostport', '3306'),
+            'hostport'        => env('demo.hostport', '3306'),
             // 数据库连接参数
             'params'          => [],
             // 数据库编码默认采用utf8
-            'charset'         => env('test.charset', 'utf8'),
+            'charset'         => env('demo.charset', 'utf8'),
             // 数据库表前缀
-            'prefix'          => env('test.prefix', 'test_'),
+            'prefix'          => env('demo.prefix', 'test_'),
 
             // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
             'deploy'          => 0,

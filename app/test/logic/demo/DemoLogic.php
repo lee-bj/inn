@@ -2,16 +2,16 @@
 /**
  * Desc 示例 - 逻辑层
  * User
- * Date {%date%}
+ * Date 2023/07/11
  */
 
-declare (strict_types = 1);
+declare (strict_types=1);
 
-namespace {%app%};
+namespace app\test\logic\demo;
 
 use basic\BaseLogic;
 
-class {%text%}Logic extends BaseLogic
+class DemoLogic extends BaseLogic
 {
     // 新增
     public static function create()
@@ -64,6 +64,6 @@ class {%text%}Logic extends BaseLogic
     // 错误返回
     public static function fail()
     {
-       return app('json')->fail('您好！这是一个[fail]示例应用');
+        return app('json')->fail('您好！这是一个[fail]示例应用');
     }
 }
