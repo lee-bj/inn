@@ -2,12 +2,15 @@
 // +----------------------------------------------------------------------
 // | 多语言设置
 // +----------------------------------------------------------------------
+use utils\Lang;
 
 return [
     // 默认语言
-    'default_lang'    => env('DEFAULT_LANG', 'zh-cn'),
+    //    'default_lang'    => env('lang.default_lang', 'cn'),
+    'default_lang'    => Lang::getDefaultLang(),
     // 允许的语言列表
-    'allow_lang_list' => [],
+    //    'allow_lang_list' => [],
+    'allow_lang_list' => Lang::getName(),
     // 多语言自动侦测变量名
     'detect_var'      => 'lang',
     // 是否使用Cookie记录
@@ -15,9 +18,10 @@ return [
     // 多语言cookie变量
     'cookie_var'      => 'think_lang',
     // 多语言header变量
-    'header_var'      => 'think-lang',
+    'header_var'      => 'Accept-Language',
     // 扩展语言包
-    'extend_list'     => [],
+    //    'extend_list'     => [],
+    'extend_list'     => Lang::getFileDir(),
     // Accept-Language转义为对应语言包名称
     'accept_language' => [
         'zh-hans-cn' => 'zh-cn',

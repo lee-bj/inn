@@ -19,14 +19,12 @@ use http\middleware\{AllowOriginMiddleware, AuthSettingConfigurationMiddleware};
  * Route::get('detail',  'demo.index/detail'); // 查询路由(局)
  */
 
-// 需登录授权路由
+// 路由
 Route::group(function () {
-
-  })->middleware(AuthSettingConfigurationMiddleware::class)
-    ->middleware(AllowOriginMiddleware::class);
-
-// 无需登录授权路由
-Route::group(function () {
+    // 示例路由
+    Route::group('test', function () {
+        Route::get('list', 'demo.demo/pageQuery');// 分页查询路由
+    });
 
   })->middleware(AuthSettingConfigurationMiddleware::class)
     ->middleware(AllowOriginMiddleware::class);

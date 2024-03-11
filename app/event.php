@@ -1,10 +1,10 @@
 <?php
 // 事件定义文件
 return [
-    'bind'      => [
+    'bind' => [
     ],
 
-    'listen'    => [
+    'listen' => [
         'AppInit'  => [],
         'HttpRun'  => [],
         'HttpEnd'  => [],
@@ -13,5 +13,6 @@ return [
     ],
 
     'subscribe' => [
+        subscribes\TaskSubscribe::class   //定时任务事件 执行类
     ],
 ];
