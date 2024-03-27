@@ -1,0 +1,71 @@
+<?php
+/**
+ * Desc 示例 - 控制器
+ * User
+ * Date {%date%}
+ */
+
+declare (strict_types = 1);
+
+
+namespace {%app%};
+
+use basic\BaseController;
+use app\{%dir%}\logic\{%layer%}\{%text%}Logic;
+
+class {%text%} extends BaseController
+{
+    // 新增
+    public function create()
+    {
+        return {%text%}Logic::create();
+    }
+
+    // 删除
+    public function delete()
+    {
+        return {%text%}Logic::update();
+    }
+
+    // 修改（全）
+    public function update()
+    {
+        return {%text%}Logic::update();
+    }
+
+    // 修改（局）
+    public function edit()
+    {
+        return {%text%}Logic::edit();
+    }
+
+    // 详情
+    public function detail()
+    {
+        return {%text%}Logic::update();
+    }
+
+    // 分页查询
+    public function pageQuery()
+    {
+        return {%text%}Logic::pageQuery();
+    }
+
+    // 列表(无分页)
+    public function listQuery()
+    {
+        return {%text%}Logic::listQuery();
+    }
+
+    // 下拉列表(下拉框)
+    public function selector()
+    {
+        return {%text%}Logic::selector();
+    }
+
+    // 错误返回
+    public function fail()
+    {
+        return TestLogic::fail();
+    }
+}
